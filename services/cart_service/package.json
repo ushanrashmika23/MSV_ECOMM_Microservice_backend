@@ -1,0 +1,27 @@
+{
+  "name": "msv_ecomm_cart_service",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ushanrashmika23/MSV_ECOMM_Microservice_backend#readme",
+  "bugs": {
+    "url": "https://github.com/ushanrashmika23/MSV_ECOMM_Microservice_backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ushanrashmika23/MSV_ECOMM_Microservice_backend.git"
+  },
+  "license": "ISC",
+  "author": "ushanrashmika23",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.3"
+  }
+}

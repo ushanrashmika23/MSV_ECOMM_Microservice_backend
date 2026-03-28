@@ -1,4 +1,4 @@
-const pool = require('../db');
+const pool = require('../configs/db');
 const { v4: uuidv4 } = require('uuid');
 
 exports.createCategory = async (req, res) => {

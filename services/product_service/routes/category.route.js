@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const productController = require('../controllers/productController');
+const categoryController = require('../controllers/category.controller');
+const authMiddleware = require('../middleware/auth.middleware');
+const { rbac } = require('../middleware/rbac.middleware');
 
-router.post('/', productController.createProduct);
-router.get('/', productController.getProducts);
-router.get('/:id', productController.getProductById);
-router.put('/:id', productController.updateProduct);
-router.delete('/:id', productController.deleteProduct);
+router.post('/', authMiddleware, rbac(['admin']), categoryController.createCategory);
+router.get('/all', authMiddleware, categoryController.getCategories);
+router.get('/:id', authMiddleware, categoryController.getCategoryById);
+router.delete('/:id', authMiddleware, rbac(['admin']), categoryController.deleteCategory);
 
 module.exports = router;
